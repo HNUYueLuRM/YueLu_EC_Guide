@@ -1,0 +1,1323 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../../%E4%BA%86%E8%A7%A3%E8%B7%83%E9%B9%BF%E6%88%98%E9%98%9F%E7%94%B5%E6%8E%A7%E7%BB%84/introduction/">
+      
+      
+        <link rel="next" href="../../%E7%94%B5%E6%8E%A7%E7%BB%84%E5%BF%85%E5%A4%87%E8%BD%AF%E4%BB%B6/software/">
+      
+      
+      <link rel="icon" href="../../../assets/yuelu_badge.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.30">
+    
+    
+      
+        <title>各兵种及道具 - YueLu 电控技术指南</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.3cba04c6.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../.." title="YueLu 电控技术指南" class="md-header__button md-logo" aria-label="YueLu 电控技术指南" data-md-component="logo">
+      
+  <img src="../../../assets/yuelu_badge.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            YueLu 电控技术指南
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              各兵种及道具
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="分享" aria-label="分享" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/kai698/YueLu_EC_Guide" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    kai698/YueLu_EC_Guide
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../.." class="md-tabs__link">
+          
+  
+    
+  
+  首页
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../%E4%BA%86%E8%A7%A3%E8%B7%83%E9%B9%BF%E6%88%98%E9%98%9F%E7%94%B5%E6%8E%A7%E7%BB%84/introduction/" class="md-tabs__link">
+          
+  
+    
+  
+  入门
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../%E7%9B%B8%E5%85%B3%E6%95%99%E7%A8%8B/%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%BC%80%E5%8F%91/USART/" class="md-tabs__link">
+          
+  
+    
+  
+  相关教程
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../%E7%89%A9%E8%B5%84%E7%AE%A1%E7%90%86/%E7%94%B5%E6%8E%A7%E7%89%A9%E8%B5%84/material/" class="md-tabs__link">
+          
+  
+    
+  
+  物资管理
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="YueLu 电控技术指南" class="md-nav__button md-logo" aria-label="YueLu 电控技术指南" data-md-component="logo">
+      
+  <img src="../../../assets/yuelu_badge.png" alt="logo">
+
+    </a>
+    YueLu 电控技术指南
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/kai698/YueLu_EC_Guide" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    kai698/YueLu_EC_Guide
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../.." class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    首页
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            首页
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    入门
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            入门
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E4%BA%86%E8%A7%A3%E8%B7%83%E9%B9%BF%E6%88%98%E9%98%9F%E7%94%B5%E6%8E%A7%E7%BB%84/introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    了解跃鹿战队电控组
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    各兵种及道具
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    各兵种及道具
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      兵种
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="兵种">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      英雄
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      工程
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      步兵
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      哨兵
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      无人机
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      飞镖
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      雷达
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      道具
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="道具">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      能量机关
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      前哨站和基地
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      兑换站
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      最后
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%94%B5%E6%8E%A7%E7%BB%84%E5%BF%85%E5%A4%87%E8%BD%AF%E4%BB%B6/software/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    电控组必备软件
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%90%86%E8%AE%BA%E5%9F%BA%E7%A1%80/theory/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    理论基础
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    相关教程
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            相关教程
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    嵌入式开发
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            嵌入式开发
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E7%9B%B8%E5%85%B3%E6%95%99%E7%A8%8B/%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%BC%80%E5%8F%91/USART/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    USART
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E7%9B%B8%E5%85%B3%E6%95%99%E7%A8%8B/%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%BC%80%E5%8F%91/DMA/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DMA
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E7%9B%B8%E5%85%B3%E6%95%99%E7%A8%8B/%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%BC%80%E5%8F%91/SPI/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SPI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E7%9B%B8%E5%85%B3%E6%95%99%E7%A8%8B/%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%BC%80%E5%8F%91/I2C/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IIC
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E7%9B%B8%E5%85%B3%E6%95%99%E7%A8%8B/%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%BC%80%E5%8F%91/CAN/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CAN
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E7%9B%B8%E5%85%B3%E6%95%99%E7%A8%8B/%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%BC%80%E5%8F%91/USB/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    USB
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    物资管理
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            物资管理
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E7%89%A9%E8%B5%84%E7%AE%A1%E7%90%86/%E7%94%B5%E6%8E%A7%E7%89%A9%E8%B5%84/material/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    电控物资
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      兵种
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="兵种">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      英雄
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      工程
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      步兵
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      哨兵
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      无人机
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      飞镖
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      雷达
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      道具
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="道具">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      能量机关
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      前哨站和基地
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      兑换站
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      最后
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="_1">各兵种及道具</h1>
+<p>想必大家已经基本了解RoboMaster的比赛规则（如果不懂，<a href="https://www.bilibili.com/video/BV1ZC411j7xV/?spm_id_from=333.337.search-card.all.click&amp;vd_source=473002b338ff914cf873eb7360e432a6">戳这个链接</a>），但你是否还对比赛中的各个兵种感到疑惑？本章节将详细介绍赛场上的兵种和道具以及电控组在其中的作用。</p>
+<h2 id="_2">兵种</h2>
+<h3 id="_3">英雄</h3>
+<p>英雄机器人是赛场上的主力兵种之一，只有它可以携带<strong>42mm大弹丸</strong>（类似于高尔夫球），<strong>对建筑物（前哨站、基地）或机器人造成大量伤害</strong>。于此同时，若英雄机器人站在狙击点<strong>吊射20m开外的基地</strong>，它将获得<strong>2.5倍的伤害增益</strong>，恐怖如斯。因此，英雄机器人相比于其他机器人需要<strong>更加稳定的发射机构和云台响应</strong>，电控组需要保证每一发弹丸的<strong>发射角度和初速度都相差无几</strong>，才能确保大弹丸在走完近似抛物线轨迹后能够准确命中<strong>数十米开外的前哨站或基地</strong>。</p>
+<h3 id="_4">工程</h3>
+<p>工程机器人是赛场上的辅助，它没有独立击杀敌方机器人或建筑物的能力，但其凭借<strong>取矿和兑矿</strong>的能力，为己方队伍<strong>兑换大量的经济</strong>，成为团队最坚实的经济后盾。在23赛季以前，很多队伍都采用抬升+夹爪的结构，但在23、24两个赛季规则变动之后，对工程取矿和兑矿的自由度提出了更高的要求，更多的队伍采用<strong>抬升+小臂+吸盘</strong>或<strong>大臂+吸盘</strong>的结构，并使用<strong>自定义控制器</strong>来降低操作手兑矿的难度。因此，工程机器人的控制难度不断增加，一方面，电控组需要对<strong>多自由度机械臂进行建模仿真</strong>，并将其部署到实机平台，实现<strong>机械臂点对点控制</strong>；另一方面，还需要搭配自定义控制器实现械臂<strong>更加丝滑的控制</strong>。 </p>
+<h3 id="_5">步兵</h3>
+<p>步兵机器人是赛场上<strong>最灵活、机动性最高、也最为丰富</strong>的兵种。它可以发射<strong>17mm荧光小弹丸</strong>，短时间内对敌方机器人造成大量伤害，同时可以通过<strong>击打能量机关</strong>为己方获取<strong>防御增益和伤害增益</strong>。</p>
+<ul>
+<li>
+<p>普通步兵</p>
+<p>普通步兵中有<strong>麦轮步兵、舵轮步兵和全向轮步兵</strong>。越来越多的队伍开始设计更加<strong>轻量化</strong>的步兵，因此步兵底盘在搭配超级电容后，可在短时间内实现<strong>功率爆发</strong>，实现飞坡、追击等战场上<strong>快速移动</strong>的功能，迅速抵达敌方半场。电控组需要实现步兵云台<strong>更加迅速的响应</strong>，搭配视觉自瞄，快速击杀敌方机器人；同时需要设计超级电容，在<strong>不超规则功率限制</strong>的情况下，确保机器人<strong>更快的移动速度</strong>。</p>
+</li>
+<li>
+<p>平衡步兵</p>
+<p>平衡步兵中有<strong>共轴麦轮、两轮板凳和轮腿平衡</strong>。因其更高的控制难度，规则为其提供了额外的优势（<strong>仅有两块大装甲板、50%的经验加成</strong>）。其中轮腿平衡对赛场地形有着<strong>更好的适应性</strong>，可轻松跨越沟壑或跳跃台阶，无形中增加了机器人的进攻路线。除上述普通步兵的基本要求外，平衡步兵还需要额外的<strong>控制算法</strong>，保证其<strong>稳定性和抗干扰性</strong>，从而实现对赛场复杂情况良好的适应性。</p>
+</li>
+</ul>
+<h3 id="_6">哨兵</h3>
+<p>22赛季以前，哨兵固定在一维轨道上，运动能力十分有限。23赛季及以后，哨兵下地，成为<strong>赛场上第一个全自动机器人</strong>。在己方前哨站被摧毁之前，哨兵拥有<strong>全图巡逻</strong>的功能，且为<strong>无敌状态</strong>，可<strong>自主巡航、自主决策并击打</strong>敌方机器人；己方前哨站被摧毁后，哨兵需迅速<strong>回到己方巡逻区</strong>，否则基地护甲展开。对于哨兵来说，更加重要的是<strong>导航和自主决策</strong>，这部分是视觉组的任务，而电控组需要做的是，实现哨兵<strong>云台的巡逻功能和快速响应能力</strong>，在扫描到敌方机器人后实现<strong>快速有效击打</strong>；同时做好与视觉部分的通信，<strong>执行在不同时期视觉发送的命令</strong>，包括但不限于巡逻、追击、回防、开启小陀螺规避伤害等。</p>
+<h3 id="_7">无人机</h3>
+<p>作为赛场上唯一的空中机器人，它能够<strong>在空中对地面单位进行击打</strong>，且<strong>不能被敌方机器人攻击</strong>。但其召唤方式也比较局限，只有<strong>冷却时间结束或花费金币</strong>才能召唤空中支援。它有着<strong>更高的载弹量且不限枪口热量</strong>，可以有效骚扰或击打敌方机器人，更有强队利用无人机击打前哨站和基地，实现局面反超。电控组需要利用<strong>飞控和Guidance</strong>实现无人机的稳定起飞、悬停、平移、旋转、降落等功能；同时需要<strong>稳定的云台</strong>，保证无人机在颠簸的情况下<strong>云台响应依然平稳</strong>；除此之外，你也可以将自己训练成一个<strong>优秀的飞手</strong>。</p>
+<h3 id="_8">飞镖</h3>
+<p>飞镖是赛场上<strong>伤害最高、距离最远的打击手段</strong>。飞镖命中前哨站可造成<strong>750点伤害</strong>，命中基地可造成<strong>1000点伤害</strong>，若命中基地随机靶，可造成<strong>1200点伤害 ! ! !</strong>，且命中不同目标会对敌方产生时间不同的<strong>致盲效果</strong>，如果命中，则可<strong>瞬间扭转战场局势</strong>。动辄<strong>数十米的击打距离</strong>，每一发飞镖需要<strong>更加稳定的落点</strong>，同时搭配一定的<strong>制导能力</strong>，才有在赛场上命中目标的可能。电控组除了需要保证<strong>稳定的发射</strong>外，还需要<strong>大量的时间进行标定和测试</strong>，最终才能实现飞镖命中。</p>
+<h3 id="_9">雷达</h3>
+<p>雷达拥有<strong>全局视野</strong>。它可在全场范围内<strong>标记敌方机器人位置</strong>，使其暴露视野，同时可对标记到的机器人发动<strong>易伤效果</strong>，从而有效击打敌方有生力量。雷达主要是利用<strong>相机和激光雷达</strong>联合标定，并通过算法来实现标记功能，这些更多是视觉组的任务。电控组唯一需要做的是，帮助视觉组实现<strong>主机和裁判系统的通信</strong>，但这些似乎视觉组自己也可以完成。</p>
+<h2 id="_10">道具</h2>
+<p>除了兵种之外，赛场上的道具也是非常关键的。因为这些道具赛务并不提供，所以我们就需要<strong>自制道具，来配合我们日常的调试和训练</strong>。</p>
+<h3 id="_11">能量机关</h3>
+<p>能量机关位于赛场中央，是场上最炫酷、最亮眼的道具。我们需要在<strong>7m外的能量机关激活点</strong>，用小弹丸<strong>按顺序连续击中五片随机亮起的扇叶</strong>才可以激活能量机关。激活小能量机关可获取<strong>25%的防御增益</strong>，而激活大能量机关则是根据机器人所击打的<strong>环数</strong>不同，获取不同的增益，最高可获得<strong>500%的攻击力增益和50%的防御增益</strong>。小能量机关为<strong>固定转速</strong>旋转，大能量机关<strong>按照三角函数呈周期性变化</strong>旋转，其中三角函数的参数为一定范围内的任意值。操作手通过手动预测来激活能量机关一般来说很难实现，通常需要视觉来进行<strong>扇叶识别和运动状态拟合</strong>，从而实现自动击打能量机关。电控组需要绘制<strong>扇叶电路板和对应主控</strong>，实现能量机关<strong>对应灯效、环数检测和旋转</strong>，从而满足视觉识别、预测和击打反馈的需求。</p>
+<h3 id="_12">前哨站和基地</h3>
+<ul>
+<li>
+<p>前哨站</p>
+<p>前哨站是赛场上的第一道屏障，也是各兵种攻击的首要目标。前哨站主要由<strong>顶部三角装甲板，中部旋转装甲板和飞镖检测模块</strong>构成，在赛场上为<strong>固定转速</strong>旋转。前哨站的搭建相对来说较为简单，通常利用<strong>旧裁判系统、主控和电机</strong>即可完成，但是由于日常大量的调试和训练，前哨站就需要<strong>经常进行维护</strong>来保证其基本功能。</p>
+</li>
+<li>
+<p>基地</p>
+<p>基地由<strong>基地护甲、装甲模块和飞镖检测模块</strong>构成，我们仅需搭建<strong>底部/顶部装甲板和飞镖检测模块</strong>，满足日常调试需求即可。</p>
+</li>
+</ul>
+<h3 id="_13">兑换站</h3>
+<p>电控组需要实现兑换框前部的<strong>灯效特征</strong>，满足<strong>视觉识别兑矿</strong>的需求。但目前视觉组好像并没有做视觉兑矿，且兑换站的臂通常是手动调整，并不需要电机驱动，因此兑换站实现似乎并不需要电控组？</p>
+<h2 id="_14">最后</h2>
+<p>以上只是笔者对兵种和道具的一个基本介绍，如果你已经加入电控组或需要了解更多相关细节，<strong>请务必仔细阅读<a href="https://www.robomaster.com/zh-CN/resource/announcement/competition">官方最新的规则手册和机器人制作规范</a>！！！这点非常重要！！！</strong></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; EC Group, YueLu, Hunan University
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/kai698/YueLu_EC_Guide" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.path", "navigation.top", "search.suggest", "search.highlight", "search.share", "content.code.annotate", "navigation.indexes"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+      
+    
+  </body>
+</html>
