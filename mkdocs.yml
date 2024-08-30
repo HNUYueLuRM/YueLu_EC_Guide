@@ -1,0 +1,66 @@
+site_name: YueLu 电控技术指南
+copyright: Copyright &copy; EC Group, YueLu, Hunan University
+repo_url: https://github.com/kai698/YueLu_EC_Guide
+repo_name: kai698/YueLu_EC_Guide
+
+nav:
+  - 首页: 
+    - index.md
+  - 入门: 
+    - 了解跃鹿战队电控组: 入门/了解跃鹿战队电控组/introduction.md
+    - 各兵种及道具: 入门/各兵种及道具/robot.md
+    - 电控组必备软件: 入门/电控组必备软件/software.md
+    - 理论基础: 入门/理论基础/theory.md
+  - 相关教程: 
+    - 嵌入式开发:
+      - USART: 相关教程/嵌入式开发/USART.md
+      - DMA: 相关教程/嵌入式开发/DMA.md
+      - SPI: 相关教程/嵌入式开发/SPI.md
+      - IIC: 相关教程/嵌入式开发/I2C.md
+      - CAN: 相关教程/嵌入式开发/CAN.md
+      - USB: 相关教程/嵌入式开发/USB.md
+  - 物资管理:
+    - 电控物资: 物资管理/电控物资/material.md
+
+theme:
+  name: material
+  language: zh
+
+  logo: assets/yuelu_badge.png
+  favicon: assets/yuelu_badge.png
+
+  features:
+    - navigation.tabs
+    - navigation.path
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.code.annotate
+    - navigation.indexes
+
+  palette: 
+
+    # Palette toggle for light mode
+    - scheme: default
+      toggle:
+        icon: material/toggle-switch 
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - scheme: slate
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to light mode
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+
+extra:
+  social:
+    - icon: fontawesome/brands/github 
+      link: https://github.com/kai698/YueLu_EC_Guide
