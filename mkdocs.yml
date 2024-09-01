@@ -1,7 +1,7 @@
 site_name: YueLu 电控技术指南
 copyright: Copyright &copy; EC Group, YueLu, Hunan University
-repo_url: https://github.com/kai698/YueLu_EC_Guide
-repo_name: kai698/YueLu_EC_Guide
+repo_url: https://github.com/HNUYueLuRM/YueLu_EC_Guide
+repo_name: HNUYueLuRM/YueLu_EC_Guide
 
 nav:
   - 首页: 
@@ -64,4 +64,4 @@ markdown_extensions:
 extra:
   social:
     - icon: fontawesome/brands/github 
-      link: https://github.com/kai698/YueLu_EC_Guide
+      link: https://github.com/HNUYueLuRM/YueLu_EC_Guide
