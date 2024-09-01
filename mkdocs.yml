@@ -6,6 +6,7 @@ repo_name: kai698/YueLu_EC_Guide
 nav:
   - 首页: 
     - index.md
+    - 关注我们.md
   - 入门: 
     - 了解跃鹿战队电控组: 入门/了解跃鹿战队电控组/introduction.md
     - 各兵种及道具: 入门/各兵种及道具/robot.md

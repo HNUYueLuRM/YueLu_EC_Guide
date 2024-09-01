@@ -72,6 +72,3 @@ Markdown是一种轻量级标记语言，设计初衷是简化HTML的书写。�
 推荐默认浏览器为[edge](https://www.microsoft.com/zh-cn/edge/download?form=MA13FJ)，默认搜索引擎为bing，同时养成在官网下载安装软件的好习惯。
 
 ![](assets\edge.png)
-
-## 最后
-上面介绍的大部分都是开源免费软件，付费的商业软件可以在软件智库/软件管家等微信公众号上获取资源，千万不要被百度上的广告给骗了！！！
