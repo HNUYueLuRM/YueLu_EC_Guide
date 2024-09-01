@@ -53,7 +53,16 @@
     
     
     
-  </head>
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -142,50 +151,6 @@
       <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
-    
-      <label class="md-header__button md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
-      </label>
-      <div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="__search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
-      <label class="md-search__icon md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-      </label>
-      <nav class="md-search__options" aria-label="查找">
-        
-          <a href="javascript:void(0)" class="md-search__icon md-icon" title="分享" aria-label="分享" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
-            
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
-          </a>
-        
-        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
-          
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
-        </button>
-      </nav>
-      
-        <div class="md-search__suggest" data-md-component="search-suggest"></div>
-      
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="search-result">
-          <div class="md-search-result__meta">
-            正在初始化搜索引擎
-          </div>
-          <ol class="md-search-result__list" role="presentation"></ol>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
     
     
       <div class="md-header__source">
@@ -307,6 +272,26 @@
   
 
       
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../%E8%B4%A1%E7%8C%AE%E6%8C%87%E5%8D%97/%E6%8A%80%E6%9C%AF%E5%BA%93%E8%B4%A1%E7%8C%AE%E6%8C%87%E5%8D%97/" class="md-tabs__link">
+          
+  
+    
+  
+  贡献指南
+
+        </a>
+      </li>
+    
+  
+
+      
     </ul>
   </div>
 </nav>
@@ -369,6 +354,8 @@
     
     
       
+      
+        
       
     
     
@@ -455,6 +442,8 @@
     
     
       
+      
+        
       
     
     
@@ -594,6 +583,8 @@
         
       
       
+        
+      
     
     
     <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
@@ -648,16 +639,21 @@
     
       
       
+        
+          
+          
+        
+      
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" checked>
         
           
-          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -907,6 +903,8 @@
     
       
       
+        
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -946,6 +944,78 @@
   
   <span class="md-ellipsis">
     电控物资
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    贡献指南
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            贡献指南
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%B4%A1%E7%8C%AE%E6%8C%87%E5%8D%97/%E6%8A%80%E6%9C%AF%E5%BA%93%E8%B4%A1%E7%8C%AE%E6%8C%87%E5%8D%97/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    技术库贡献指南
   </span>
   
 
@@ -1054,12 +1124,12 @@
 <ul>
 <li>
 <p>闭环总线网络
-     <img alt="" src="../assets/Snipaste_2023-09-21_20-14-50.png" />
+     <a class="glightbox" href="../assets/Snipaste_2023-09-21_20-14-50.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../assets/Snipaste_2023-09-21_20-14-50.png" /></a>
      <em>终端电阻用于阻抗匹配，减少回波反射</em></p>
 </li>
 <li>
 <p>开环总线网络
-     <img alt="" src="../assets/Snipaste_2023-09-21_20-16-09.png" /></p>
+     <a class="glightbox" href="../assets/Snipaste_2023-09-21_20-16-09.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../assets/Snipaste_2023-09-21_20-16-09.png" /></a></p>
 </li>
 </ul>
 </li>
@@ -1087,7 +1157,7 @@
 <li>
 <p>CAN协议中的差分信号</p>
 <p>以高速 CAN 协议为例，当表示逻辑 1 时(隐性电平)， CAN_High 和 CAN_Low线上的电压均为 2.5v，即它们的电压差 VH-VL=0V；而表示逻辑 0 时(显性电平)，CAN_High 的电平为 3.5V， CAN_Low 线的电平为 1.5V，即它们的电压差为 VH-VL=2V。</p>
-<p><img alt="" src="../assets/Snipaste_2023-09-21_20-29-27.png" /></p>
+<p><a class="glightbox" href="../assets/Snipaste_2023-09-21_20-29-27.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../assets/Snipaste_2023-09-21_20-29-27.png" /></a></p>
 <p>在 CAN 总线中，必须使它处于隐性电平(逻辑 1)或显性电平(逻辑 0)中的其中一个状态。假如有两个 CAN 通讯节点，在同一时间，一个输出隐性电平，另一个输出显性电平，类似 I2C 总线的“线与”特性将使它处于显性电平状态，显性电平的名字就是这样来的， 即可以认为显性具有优先的意味。</p>
 </li>
 </ol>
@@ -1095,14 +1165,14 @@
 <ol>
 <li>
 <p>帧的种类</p>
-<p><img alt="" src="../assets/Snipaste_2023-09-21_20-35-50.png" /></p>
+<p><a class="glightbox" href="../assets/Snipaste_2023-09-21_20-35-50.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../assets/Snipaste_2023-09-21_20-35-50.png" /></a></p>
 </li>
 <li>
 <p>数据帧</p>
 <ul>
 <li>
 <p>数据帧结构
-     <img alt="" src="../assets/Snipaste_2023-09-21_20-37-19.png" /></p>
+     <a class="glightbox" href="../assets/Snipaste_2023-09-21_20-37-19.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../assets/Snipaste_2023-09-21_20-37-19.png" /></a></p>
 </li>
 <li>
 <p>帧起始：
@@ -1145,7 +1215,7 @@
 <li>
 <p>位时序</p>
 <p>为了实现位同步， CAN 协议把每一个数据位的时序分解成如图 43-5 所示的 SS 段、PTS 段、 PBS1 段、 PBS2 段，这四段的长度加起来即为一个 CAN 数据位的长度。分解后最小的时间单位是 Tq，而一个完整的位由 8~25 个 Tq 组成。为方便表示， 图 43-5 中的高低电平直接代表信号逻辑 0 或逻辑 1(不是差分信号)。</p>
-<p><img alt="" src="../assets/Snipaste_2023-09-21_21-12-10.png" /></p>
+<p><a class="glightbox" href="../assets/Snipaste_2023-09-21_21-12-10.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../assets/Snipaste_2023-09-21_21-12-10.png" /></a></p>
 <ul>
 <li>
 <p>SS段：
@@ -1176,15 +1246,15 @@
 <li>
 <p>硬同步：
      见图 43-6，可以看到当总线出现帧起始信号时，某节点检测到总线的帧起始信号不在节点内部时序的 SS 段范围，所以判断它自己的内部时序与总线不同步，因而这个状态的采样点采集得的数据是不正确的。所以节点以硬同步的方式调整，把自己的位时序中的 SS段平移至总线出现下降沿的部分，获得同步，同步后采样点就可以采集得正确数据了。</p>
-<p><img alt="" src="../assets/Snipaste_2023-09-21_21-39-10.png" /></p>
+<p><a class="glightbox" href="../assets/Snipaste_2023-09-21_21-39-10.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../assets/Snipaste_2023-09-21_21-39-10.png" /></a></p>
 </li>
 <li>
 <p>重新同步：
      前面的硬同步只是当存在帧起始信号时才起作用，如果在一帧很长的数据内，节点信号与总线信号相位有偏移时，这种同步方式就无能为力了。因而需要引入重新同步方式，它利用普通数据位的高至低电平的跳变沿来同步(帧起始信号是特殊的跳变沿)。</p>
 <p>重新同步的方式分为超前和滞后两种情况，以总线跳变沿与 SS 段的相对位置进行区分。第一种相位超前的情况如图 43-7，节点从总线的边沿跳变中，检测到它内部的时序比总线的时序相对超前 2Tq，这时控制器在下一个位时序中的 PBS1 段增加 2Tq 的时间长度，使得节点与总线时序重新同步。</p>
-<p><img alt="" src="../assets/Snipaste_2023-09-21_21-44-54.png" /></p>
+<p><a class="glightbox" href="../assets/Snipaste_2023-09-21_21-44-54.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../assets/Snipaste_2023-09-21_21-44-54.png" /></a></p>
 <p>第二种相位滞后的情况如图 43-8，节点从总线的边沿跳变中，检测到它的时序比总线的时序相对滞后 2Tq，这时控制器在前一个位时序中的 PBS2 段减少 2Tq 的时间长度，获得同步。</p>
-<p><img alt="" src="../assets/Snipaste_2023-09-21_21-47-05.png" /></p>
+<p><a class="glightbox" href="../assets/Snipaste_2023-09-21_21-47-05.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../assets/Snipaste_2023-09-21_21-47-05.png" /></a></p>
 </li>
 <li>
 <p>补充：
@@ -1227,7 +1297,7 @@
 </li>
 <li>
 <p>测试模式</p>
-<p><img alt="" src="../assets/Snipaste_2023-09-22_15-21-01.png" /></p>
+<p><a class="glightbox" href="../assets/Snipaste_2023-09-22_15-21-01.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../assets/Snipaste_2023-09-22_15-21-01.png" /></a></p>
 <ul>
 <li>
 <p>正常模式：
@@ -1254,7 +1324,7 @@
 <li>
 <p>控制器框图</p>
 <p>STM32 的有两组 CAN 控制器，其中 CAN1 是主设备，框图中的“存储访问控制器”是由 CAN1 控制的， CAN2 无法直接访问存储区域，所以使用 CAN2 的时候必须使能CAN1 外设的时钟。框图中主要包含 CAN 控制内核、发送邮箱、接收 FIFO 以及验收筛选器。</p>
-<p><img alt="" src="../assets/Snipaste_2023-09-22_15-34-07.png" /></p>
+<p><a class="glightbox" href="../assets/Snipaste_2023-09-22_15-34-07.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../assets/Snipaste_2023-09-22_15-34-07.png" /></a></p>
 <ul>
 <li>
 <p>CAN内核：
@@ -1264,13 +1334,13 @@
 <p>发送邮箱：
      用来缓存待发送报文，最多可以缓存3个报文。</p>
 <p>每个发送邮箱中包含有标识符寄存器 CAN_TIxR、数据长度控制寄存器 CAN_TDTxR及 2 个数据寄存器 CAN_TDLxR、 CAN_TDHxR。</p>
-<p><img alt="" src="../assets/Snipaste_2023-09-22_16-21-11.png" /></p>
+<p><a class="glightbox" href="../assets/Snipaste_2023-09-22_16-21-11.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../assets/Snipaste_2023-09-22_16-21-11.png" /></a></p>
 </li>
 <li>
 <p>接收FIFO：
      缓存接收到的有效报文。</p>
 <p>一共有 2 个接收 FIFO，每个 FIFO 中有 3 个邮箱，即最多可以缓存 6 个接收到的报文。当接收到报文时， FIFO 的报文计数器会自增，而 STM32 内部读取 FIFO 数据之后，报文计数器会自减，我们通过状态寄存器可获知报文计数器的值，而通过前面主控制寄存器的 RFLM 位，可设置锁定模式，锁定模式下 FIFO 溢出时会丢弃新报文，非锁定模式下 FIFO 溢出时新报文会覆盖旧报文。</p>
-<p><img alt="" src="../assets/Snipaste_2023-09-22_16-29-01.png" /></p>
+<p><a class="glightbox" href="../assets/Snipaste_2023-09-22_16-29-01.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../assets/Snipaste_2023-09-22_16-29-01.png" /></a></p>
 </li>
 <li>
 <p>验收筛选器：
@@ -1296,10 +1366,10 @@
 </li>
 </ul>
 <p>通过配置筛选模式寄存器 CAN_FM1R 的 FBMx 位可以设置筛选器工作在哪个模式。</p>
-<p><img alt="" src="../assets/Snipaste_2023-09-22_16-12-33.png" />
- <img alt="" src="../assets/Snipaste_2023-09-22_16-14-35.png" /></p>
+<p><a class="glightbox" href="../assets/Snipaste_2023-09-22_16-12-33.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../assets/Snipaste_2023-09-22_16-12-33.png" /></a>
+ <a class="glightbox" href="../assets/Snipaste_2023-09-22_16-14-35.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../assets/Snipaste_2023-09-22_16-14-35.png" /></a></p>
 <p>例如下面的表格所示，在掩码模式时，第一个寄存器存储要筛选的 ID，第二个寄存器存储掩码，掩码为 1 的部分表示该位必须与 ID 中的内容一致，筛选的结果为表中第三行的ID 值，它是一组包含多个的 ID 值，其中 x 表示该位可以为 1 可以为 0。</p>
-<p><img alt="" src="../assets/Snipaste_2023-09-22_16-16-48.png" /></p>
+<p><a class="glightbox" href="../assets/Snipaste_2023-09-22_16-16-48.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../assets/Snipaste_2023-09-22_16-16-48.png" /></a></p>
 <p>而工作在标识符模式时， 2 个寄存器存储的都是要筛选的 ID，它只包含 2 个要筛选的ID 值(32 位模式时)。</p>
 <p>如果使能了筛选器，且报文的 ID 与所有筛选器的配置都不匹配， CAN 外设会丢弃该报文，不存入接收 FIFO。</p>
 </li>
@@ -1308,9 +1378,9 @@
 <li>
 <p>控制器位时序</p>
 <p>STM32 的 CAN 外设位时序中只包含 3 段，分别是同步段 SYNC_SEG、位段 BS1 及位段 BS2，采样点位于 BS1 及 BS2 段的交界处。其中 SYNC_SEG 段固定长度为 1Tq，而BS1 及 BS2 段可以在位时序寄存器 CAN_BTR 设置它们的时间长度，它们可以在重新同步期间增长或缩短，该长度 SJW 也可在位时序寄存器中配置。</p>
-<p><img alt="" src="../assets/Snipaste_2023-09-22_16-38-48.png" /></p>
+<p><a class="glightbox" href="../assets/Snipaste_2023-09-22_16-38-48.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../assets/Snipaste_2023-09-22_16-38-48.png" /></a></p>
 <p>理解 STM32 的 CAN 外设的位时序时，可以把它的 BS1 段理解为是由前面介绍的CAN 标准协议中 PTS 段与 PBS1 段合在一起的，而 BS2 段就相当于 PBS2 段。</p>
-<p><img alt="" src="../assets/Snipaste_2023-09-22_16-43-20.png" /></p>
+<p><a class="glightbox" href="../assets/Snipaste_2023-09-22_16-43-20.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../assets/Snipaste_2023-09-22_16-43-20.png" /></a></p>
 </li>
 </ol>
 
@@ -1320,6 +1390,38 @@
 
 
 
+  
+    
+  
+  
+    
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="最后更新">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2024-08-30</span>
+  </span>
+
+    
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="创建日期">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3h-2Z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2024-08-30</span>
+  </span>
+
+    
+    
+    
+  </aside>
 
 
 
@@ -1384,11 +1486,13 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.path", "navigation.top", "search.suggest", "search.highlight", "search.share", "content.code.annotate", "navigation.indexes"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.path", "navigation.top", "navigation.indexes", "navigation.sections", "search.suggest", "search.highlight", "search.share", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
       <script src="../../../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
       
     
-  </body>
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
 </html>
