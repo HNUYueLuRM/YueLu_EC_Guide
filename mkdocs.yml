@@ -2,6 +2,7 @@ site_name: YueLu 电控技术指南
 copyright: Copyright &copy; EC Group, YueLu, Hunan University
 repo_url: https://github.com/HNUYueLuRM/YueLu_EC_Guide
 repo_name: HNUYueLuRM/YueLu_EC_Guide
+edit_uri: edit/master/docs/
 
 nav:
   - 首页: 
@@ -30,15 +31,24 @@ theme:
   logo: assets/yuelu_badge.png
   favicon: assets/yuelu_badge.png
 
+  icon:
+    edit: material/pencil 
+    view: material/eye
+
   features:
     - navigation.tabs
     - navigation.path
     - navigation.top
+    - navigation.indexes
+    - navigation.tracking
     - search.suggest
     - search.highlight
     - search.share
     - content.code.annotate
-    - navigation.indexes
+    - content.code.copy
+    - content.code.select
+    - content.action.edit
+    - content.action.view
 
   palette: 
 
@@ -56,7 +66,11 @@ theme:
 
 markdown_extensions:
   - pymdownx.highlight:
+      auto_title: true
       anchor_linenums: true
+      linenums: true
+      line_spans: __span
+      pygments_lang_class: true
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.superfences
@@ -65,3 +79,13 @@ extra:
   social:
     - icon: fontawesome/brands/github 
       link: https://github.com/HNUYueLuRM/YueLu_EC_Guide
+
+plugins:
+  - search
+  - glightbox
+  - git-revision-date-localized:
+      enable_creation_date: true
+      type: iso_date
+  - git-committers:
+      repository: HNUYueLuRM/YueLu_EC_Guide
+      branch: master
