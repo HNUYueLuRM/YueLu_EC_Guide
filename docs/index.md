@@ -6,4 +6,4 @@
 
 本技术指南还在**持续更新中...敬请期待**！
 
-![23赛季兵种合照](assets\allrobot.jpg)
+![23赛季兵种合照](assets/allrobot.jpg)

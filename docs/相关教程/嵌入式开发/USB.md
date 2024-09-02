@@ -8,20 +8,20 @@
    
 3. 标准 USB 共四根线组成, 除 VCC / GND 外, 另外为 D+、D-, 这两根数据线采用的是差分电压的方式进行数据传输。在 USB 主机上，D-和 D+都是接了 15K 的电阻到 GND，所以在没有设备接入的时候，D+、D-均是低电平。而在 USB 设备中，如果是高速设备，则会在 D+上接一个 1.5K 的电阻到 VCC；而如果是低速设备，则会在 D-上接一个 1.5K 的电阻到 VCC。这样当设备接入主机的时候，主机就可以判断是否有设备接入，并能判断设备是高速设备还是低速设备。
    
-    ![](assets\Snipaste_2024-03-02_13-58-51.png)
+    ![](assets/Snipaste_2024-03-02_13-58-51.png)
 
-    ![](assets\Snipaste_2024-03-02_15-02-09.png)
+    ![](assets/Snipaste_2024-03-02_15-02-09.png)
 
 
 ## STM32 USB框图
 
-![](assets\Snipaste_2024-03-02_14-21-51.png)
+![](assets/Snipaste_2024-03-02_14-21-51.png)
 
 ## STM32CUBEMX 配置 （CDC虚拟串口）
 
 1. USB 参数配置
    
-    ![](assets\Snipaste_2024-03-02_15-14-03.png)
+    ![](assets/Snipaste_2024-03-02_15-14-03.png)
 
     选择 **USB_OTG_FS**(全速模式 12MBits/s)，模式选择**Device_Only**(从设备)，其他保持默认即可。
 
@@ -29,17 +29,17 @@
    
     在 Middleware 中选择 USB_DEVICE 设置，在 Class For FS IP 设备类别选择 **Communication Device Class（Virtual Port Com）** 虚拟串口。
 
-    ![](assets\Snipaste_2024-03-02_15-29-17.png)
+    ![](assets/Snipaste_2024-03-02_15-29-17.png)
 
     参数配置、设备标识符保持默认即可。
 
-    ![](assets\Snipaste_2024-03-02_15-32-03.png)
-    ![](assets\Snipaste_2024-03-02_15-32-18.png)
+    ![](assets/Snipaste_2024-03-02_15-32-03.png)
+    ![](assets/Snipaste_2024-03-02_15-32-18.png)
 
 3. 查看端口
    
     烧录默认代码，连上电脑可看到对应端口。
-    ![](assets\Snipaste_2024-03-02_19-47-35.png)
+    ![](assets/Snipaste_2024-03-02_19-47-35.png)
 
 
 ## USB虚拟串口函数驱动

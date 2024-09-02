@@ -42,7 +42,7 @@ DMA的作用就是**实现数据的直接传输，而去掉了传统数据传输
 ## DMA CubeMX配置
 
 以USART串口为例
-![](assets\Snipaste_2024-08-05_13-36-01.png)
+![](assets/Snipaste_2024-08-05_13-36-01.png)
 
 ## DMA HAL库函数
 
