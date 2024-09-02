@@ -23,6 +23,8 @@ nav:
       - USB: 相关教程/嵌入式开发/USB.md
   - 物资管理:
     - 电控物资: 物资管理/电控物资/material.md
+  - 贡献指南:
+    - 技术库贡献指南: 贡献指南/技术库贡献指南.md
 
 theme:
   name: material
