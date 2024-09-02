@@ -73,6 +73,8 @@ markdown_extensions:
       linenums: true
       line_spans: __span
       pygments_lang_class: true
+  - toc:
+      permalink: true
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.superfences
