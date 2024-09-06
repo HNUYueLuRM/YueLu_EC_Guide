@@ -4,32 +4,6 @@ repo_url: https://github.com/HNUYueLuRM/YueLu_EC_Guide
 repo_name: HNUYueLuRM/YueLu_EC_Guide
 edit_uri: edit/master/docs/
 
-nav:
-  - 首页: 
-    - index.md
-    - 关注我们.md
-  - 入门: 
-    - 了解跃鹿战队电控组: 入门/了解跃鹿战队电控组/introduction.md
-    - 各兵种及道具: 入门/各兵种及道具/robot.md
-    - 电控组必备软件: 入门/电控组必备软件/software.md
-    - 理论基础: 入门/理论基础/theory.md
-  - 相关教程: 
-    - 嵌入式开发:
-      - 通信方式:
-        - USART: 相关教程/嵌入式开发/通信方式/USART.md
-        - DMA: 相关教程/嵌入式开发/通信方式/DMA.md
-        - SPI: 相关教程/嵌入式开发/通信方式/SPI.md
-        - IIC: 相关教程/嵌入式开发/通信方式/I2C.md
-        - CAN: 相关教程/嵌入式开发/通信方式/CAN.md
-        - USB: 相关教程/嵌入式开发/通信方式/USB.md
-    - 相关组件:
-      - IMU:
-        - 三维旋转表示: 相关组件/IMU/三维旋转表示.md
-  - 物资管理:
-    - 电控物资: 物资管理/电控物资/material.md
-  - 贡献指南:
-    - 技术库贡献指南: 贡献指南/技术库贡献指南.md
-
 theme:
   name: material
   language: zh
@@ -79,9 +53,15 @@ markdown_extensions:
       pygments_lang_class: true
   - toc:
       permalink: true
+  - pymdownx.arithmatex:
+      generic: true
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.superfences
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
 
 extra:
   social:
@@ -94,6 +74,29 @@ plugins:
   - git-revision-date-localized:
       enable_creation_date: true
       type: iso_date
-  - git-committers:
-      repository: HNUYueLuRM/YueLu_EC_Guide
-      branch: master
+
+nav:
+  - 首页: 
+    - index.md
+    - 关注我们.md
+  - 入门: 
+    - 了解跃鹿战队电控组: 入门/了解跃鹿战队电控组/introduction.md
+    - 各兵种及道具: 入门/各兵种及道具/robot.md
+    - 电控组必备软件: 入门/电控组必备软件/software.md
+    - 理论基础: 入门/理论基础/theory.md
+  - 相关教程: 
+    - 嵌入式开发:
+      - 通信方式:
+        - USART: 相关教程/嵌入式开发/通信方式/USART.md
+        - DMA: 相关教程/嵌入式开发/通信方式/DMA.md
+        - SPI: 相关教程/嵌入式开发/通信方式/SPI.md
+        - IIC: 相关教程/嵌入式开发/通信方式/I2C.md
+        - CAN: 相关教程/嵌入式开发/通信方式/CAN.md
+        - USB: 相关教程/嵌入式开发/通信方式/USB.md
+    - 相关组件:
+      - IMU:
+        - 三维旋转表示: 相关教程/相关组件/IMU/三维旋转表示.md
+  - 物资管理:
+    - 电控物资: 物资管理/电控物资/material.md
+  - 贡献指南:
+    - 技术库贡献指南: 贡献指南/技术库贡献指南.md
