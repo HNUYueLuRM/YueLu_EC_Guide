@@ -1088,10 +1088,43 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="欧拉角">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      直观表示
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      表示方式
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      万向节死锁
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
+  <a href="#_10" class="md-nav__link">
     <span class="md-ellipsis">
       四元数
     </span>
@@ -1100,7 +1133,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
+  <a href="#_11" class="md-nav__link">
     <span class="md-ellipsis">
       三者关系
     </span>
@@ -1355,10 +1388,43 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="欧拉角">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      直观表示
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      表示方式
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      万向节死锁
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
+  <a href="#_10" class="md-nav__link">
     <span class="md-ellipsis">
       四元数
     </span>
@@ -1367,7 +1433,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
+  <a href="#_11" class="md-nav__link">
     <span class="md-ellipsis">
       三者关系
     </span>
@@ -1693,8 +1759,22 @@ M=
 <li>Z-Y-X顺序的外旋等价于X-Y-Z顺序的内旋。</li>
 </ul>
 <h2 id="_6">欧拉角<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
-<h2 id="_7">四元数<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
-<h2 id="_8">三者关系<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
+<h3 id="_7">直观表示<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<p>以X、Y、Z轴旋转的角度表示三维空间的旋转，也就是Row、Pitch、Yaw的角度：
+<a class="glightbox" href="../assets/Snipaste_2024-09-07_12-36-07.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../assets/Snipaste_2024-09-07_12-36-07.png" /></a></p>
+<h3 id="_8">表示方式<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<p>欧拉角一般具有两大类表示方式,每类按照旋转次序的不同分为6小类:</p>
+<p>Proper Euler angles (z-x-z, x-y-x, y-z-y, z-y-z, x-z-x, y-x-y)</p>
+<p>Tait–Bryan angles (x-y-z, y-z-x, z-x-y, x-z-y, z-y-x, y-x-z)</p>
+<p>每个大类都使用了3个变量描述三次旋转过程中的旋转角度, 差别在于Proper Euler angles只涉及两个转轴，而Tait–Bryan angles涉及三个转轴。</p>
+<p>如果只给出一组欧拉角，绕x，y，z轴的转角为<span class="arithmatex">\((\alpha, \beta, \gamma)\)</span>，我们并不能确定其姿态，还需要知道旋转顺序以及内旋或外旋，才能确定这组欧拉角对应的姿态。</p>
+<h3 id="_9">万向节死锁<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
+<p>万向锁（Gimbal Lock），当Pitch = ±90°时，绕第三个轴旋转的欧拉角和绕第一个轴旋转的欧拉角效果相同，即系统失去了一个自由度，出现了奇异性。</p>
+<p><a class="glightbox" href="../assets/Snipaste_2024-09-07_15-32-14.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../assets/Snipaste_2024-09-07_15-32-14.png" /></a>
+<a class="glightbox" href="../assets/Snipaste_2024-09-07_15-32-58.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../assets/Snipaste_2024-09-07_15-32-58.png" /></a></p>
+<p>在使用欧拉角表示时，保证<span class="arithmatex">\(Pitch\neq90°\)</span>，避免出现万向锁的问题。</p>
+<h2 id="_10">四元数<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h2>
+<h2 id="_11">三者关系<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h2>
 
 
 
