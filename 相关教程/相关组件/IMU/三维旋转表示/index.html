@@ -1103,7 +1103,7 @@
           <li class="md-nav__item">
   <a href="#_8" class="md-nav__link">
     <span class="md-ellipsis">
-      表示方式
+      表达方式
     </span>
   </a>
   
@@ -1130,10 +1130,34 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="四元数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      定义及性质
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      单位四元数表示三维空间旋转
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
-  <a href="#_11" class="md-nav__link">
+  <a href="#_13" class="md-nav__link">
     <span class="md-ellipsis">
       三者关系
     </span>
@@ -1403,7 +1427,7 @@
           <li class="md-nav__item">
   <a href="#_8" class="md-nav__link">
     <span class="md-ellipsis">
-      表示方式
+      表达方式
     </span>
   </a>
   
@@ -1430,10 +1454,34 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="四元数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      定义及性质
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      单位四元数表示三维空间旋转
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
-  <a href="#_11" class="md-nav__link">
+  <a href="#_13" class="md-nav__link">
     <span class="md-ellipsis">
       三者关系
     </span>
@@ -1762,19 +1810,110 @@ M=
 <h3 id="_7">直观表示<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
 <p>以X、Y、Z轴旋转的角度表示三维空间的旋转，也就是Row、Pitch、Yaw的角度：
 <a class="glightbox" href="../assets/Snipaste_2024-09-07_12-36-07.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../assets/Snipaste_2024-09-07_12-36-07.png" /></a></p>
-<h3 id="_8">表示方式<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
-<p>欧拉角一般具有两大类表示方式,每类按照旋转次序的不同分为6小类:</p>
+<h3 id="_8">表达方式<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<p>欧拉角一般具有两大类表达方式，每类按照旋转次序的不同分为6小类:</p>
 <p>Proper Euler angles (z-x-z, x-y-x, y-z-y, z-y-z, x-z-x, y-x-y)</p>
 <p>Tait–Bryan angles (x-y-z, y-z-x, z-x-y, x-z-y, z-y-x, y-x-z)</p>
-<p>每个大类都使用了3个变量描述三次旋转过程中的旋转角度, 差别在于Proper Euler angles只涉及两个转轴，而Tait–Bryan angles涉及三个转轴。</p>
+<p>每个大类都使用了3个变量描述三次旋转过程中的旋转角度，差别在于Proper Euler angles只涉及两个转轴，而Tait–Bryan angles涉及三个转轴。</p>
 <p>如果只给出一组欧拉角，绕x，y，z轴的转角为<span class="arithmatex">\((\alpha, \beta, \gamma)\)</span>，我们并不能确定其姿态，还需要知道旋转顺序以及内旋或外旋，才能确定这组欧拉角对应的姿态。</p>
 <h3 id="_9">万向节死锁<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
-<p>万向锁（Gimbal Lock），当Pitch = ±90°时，绕第三个轴旋转的欧拉角和绕第一个轴旋转的欧拉角效果相同，即系统失去了一个自由度，出现了奇异性。</p>
+<p>万向锁（Gimbal Lock），当 <span class="arithmatex">\(Pitch = ±90°\)</span> 时，绕第三个轴旋转的欧拉角和绕第一个轴旋转的欧拉角效果相同，即系统失去了一个自由度，出现了奇异性。</p>
 <p><a class="glightbox" href="../assets/Snipaste_2024-09-07_15-32-14.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../assets/Snipaste_2024-09-07_15-32-14.png" /></a>
 <a class="glightbox" href="../assets/Snipaste_2024-09-07_15-32-58.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../assets/Snipaste_2024-09-07_15-32-58.png" /></a></p>
-<p>在使用欧拉角表示时，保证<span class="arithmatex">\(Pitch\neq90°\)</span>，避免出现万向锁的问题。</p>
+<p>在使用欧拉角表示时，保证<span class="arithmatex">\(Pitch\neq±90°\)</span>，避免出现万向锁的问题。</p>
 <h2 id="_10">四元数<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h2>
-<h2 id="_11">三者关系<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h2>
+<p>四元数的直观表示比较复杂，难以理解，但四元数在三维旋转表示中有着独特的优势。相较于欧拉角，可避免万向锁的问题；相较于旋转矩阵，又可清晰地表示出旋转轴及旋转角度，这里给出<a href="https://www.bilibili.com/video/BV1SW411y7W1?from=search&amp;seid=2286694305504614618&amp;spm_id_from=333.337.0.0">四元数可视化</a>。</p>
+<h3 id="_11">定义及性质<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
+<p>四元数是由实数加上三个元素 <span class="arithmatex">\(i, j, k\)</span> 组成，而且它们有如下的关系：</p>
+<div class="arithmatex">\[
+i^2+j^2+k^2=ijk=-1
+\]</div>
+<p>四元数一般表示为 <span class="arithmatex">\(a+bi+cj+dk\)</span></p>
+<p>四元数也可表示为向量形式：</p>
+<div class="arithmatex">\[
+q=
+{\begin{bmatrix}
+a\\
+b\\
+c\\
+d
+\end{bmatrix}
+}
+\]</div>
+<p>此外，我们在表示四元数时，还经常把实部与虚部分开，用一个实数 <span class="arithmatex">\(s\)</span> 表示实部，用一个三维向量 <span class="arithmatex">\(\vec{v}\)</span> 来表示虚部：</p>
+<div class="arithmatex">\[
+q=
+{\begin{bmatrix}
+s&amp;\vec{v}
+\end{bmatrix}
+}，
+(\vec{v}=
+{\begin{bmatrix}
+x\\
+y\\
+z
+\end{bmatrix}
+}，
+s,x,y,z\in{R})
+\]</div>
+<p>四元数乘法满足反交换律：</p>
+<div class="arithmatex">\[
+ij=k，ji=-k;  
+\]</div>
+<div class="arithmatex">\[
+jk=i，kj=-i;  
+\]</div>
+<div class="arithmatex">\[
+ki=j，ik=-j;
+\]</div>
+<p>四元数模长（范数）：</p>
+<div class="arithmatex">\[
+||q||=\sqrt{a^2+b^2+c^2+d^2}
+\]</div>
+<p>或者</p>
+<div class="arithmatex">\[
+||q||=\sqrt{s^2+||v||^2}
+\]</div>
+<p>四元数共轭：</p>
+<div class="arithmatex">\[
+q^*=a-bi-cj-dk
+\]</div>
+<p>四元数的逆：</p>
+<div class="arithmatex">\[
+{q^{-1}}\cdot{q}=1
+\]</div>
+<div class="arithmatex">\[
+q^{-1}={{q^*}\over{||q||^2}}
+\]</div>
+<p>纯四元数（仅有虚部）：</p>
+<div class="arithmatex">\[
+q=
+{\begin{bmatrix}
+0&amp;\vec{v}
+\end{bmatrix}
+}
+\]</div>
+<p>单位四元数（模长为1）：</p>
+<div class="arithmatex">\[
+||q||=1
+\]</div>
+<h3 id="_12">单位四元数表示三维空间旋转<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
+<p>若三维空间里的一个点的笛卡尔坐标为 <span class="arithmatex">\((x,y,z)\)</span>，则它用纯四元数 <span class="arithmatex">\(xi+yj+zk\)</span> 表示。</p>
+<p>设 <span class="arithmatex">\(q\)</span> 为一个单位四元数，而 <span class="arithmatex">\(p\)</span> 是一个纯四元数，定义：</p>
+<div class="arithmatex">\[
+R_q(p)=qpq^{-1}
+\]</div>
+<p>则 <span class="arithmatex">\(R_q(p)\)</span> 也是一个纯四元数，可以证明 <span class="arithmatex">\(R_q\)</span> 确实表示一个旋转，这个旋转将空间的点 <span class="arithmatex">\(p\)</span> 旋转为空间的另一个点 <span class="arithmatex">\(R_q(p)\)</span>。</p>
+<p>其中：</p>
+<div class="arithmatex">\[
+q=
+{\begin{bmatrix}
+\cos{\theta\over2}&amp;\vec{v}\cdot\sin{\theta\over2}
+\end{bmatrix}
+}
+\]</div>
+<p><span class="arithmatex">\(\vec{v}={\begin{bmatrix}x&amp;y&amp;z\end{bmatrix}}\)</span> 为三维旋转轴向量，<span class="arithmatex">\(\theta\)</span> 为旋转角度。</p>
+<h2 id="_13">三者关系<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h2>
 
 
 
