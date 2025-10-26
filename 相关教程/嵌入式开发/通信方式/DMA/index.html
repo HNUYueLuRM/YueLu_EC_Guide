@@ -9,25 +9,25 @@
       
       
       
-        <link rel="prev" href="../../%E4%BA%86%E8%A7%A3%E8%B7%83%E9%B9%BF%E6%88%98%E9%98%9F%E7%94%B5%E6%8E%A7%E7%BB%84/introduction/">
+        <link rel="prev" href="../USART/">
       
       
-        <link rel="next" href="../../%E7%94%B5%E6%8E%A7%E7%BB%84%E5%BF%85%E5%A4%87%E8%BD%AF%E4%BB%B6/software/">
+        <link rel="next" href="../SPI/">
       
       
-      <link rel="icon" href="../../../assets/yuelu_badge.png">
+      <link rel="icon" href="../../../../assets/yuelu_badge.png">
       <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.30">
     
     
       
-        <title>各兵种及道具 - YueLu 电控技术指南</title>
+        <title>DMA - YueLu 电控技术指南</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.3cba04c6.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.3cba04c6.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -46,14 +46,14 @@
       
     
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
     
     
     
-   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+   <link href="../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
     html.glightbox-open { overflow: initial; height: 100%; }
     .gslide-title { margin-top: 0px; user-select: text; }
     .gslide-desc { color: #666; user-select: text; }
@@ -62,7 +62,7 @@
     .gdesc-inner { font-size: 0.75rem; }
     body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
     body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -81,7 +81,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#dma" class="md-skip">
           跳转至
         </a>
       
@@ -95,9 +95,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href="../../.." title="YueLu 电控技术指南" class="md-header__button md-logo" aria-label="YueLu 电控技术指南" data-md-component="logo">
+    <a href="../../../.." title="YueLu 电控技术指南" class="md-header__button md-logo" aria-label="YueLu 电控技术指南" data-md-component="logo">
       
-  <img src="../../../assets/yuelu_badge.png" alt="logo">
+  <img src="../../../../assets/yuelu_badge.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -114,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              各兵种及道具
+              DMA
             
           </span>
         </div>
@@ -230,7 +230,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../.." class="md-tabs__link">
+        <a href="../../../.." class="md-tabs__link">
           
   
     
@@ -246,13 +246,11 @@
         
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../../%E4%BA%86%E8%A7%A3%E8%B7%83%E9%B9%BF%E6%88%98%E9%98%9F%E7%94%B5%E6%8E%A7%E7%BB%84/introduction/" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../../../%E5%85%A5%E9%97%A8/%E4%BA%86%E8%A7%A3%E8%B7%83%E9%B9%BF%E6%88%98%E9%98%9F%E7%94%B5%E6%8E%A7%E7%BB%84/introduction/" class="md-tabs__link">
           
   
     
@@ -268,23 +266,29 @@
         
   
   
+    
+  
   
     
     
       
   
   
+    
+  
   
     
     
       
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../../%E7%9B%B8%E5%85%B3%E6%95%99%E7%A8%8B/%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%BC%80%E5%8F%91/%E9%80%9A%E4%BF%A1%E6%96%B9%E5%BC%8F/USART/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../USART/" class="md-tabs__link">
           
   
     
@@ -310,7 +314,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../%E7%89%A9%E8%B5%84%E7%AE%A1%E7%90%86/%E7%94%B5%E6%8E%A7%E7%89%A9%E8%B5%84/material/" class="md-tabs__link">
+        <a href="../../../../%E7%89%A9%E8%B5%84%E7%AE%A1%E7%90%86/%E7%94%B5%E6%8E%A7%E7%89%A9%E8%B5%84/material/" class="md-tabs__link">
           
   
     
@@ -330,7 +334,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../%E8%B4%A1%E7%8C%AE%E6%8C%87%E5%8D%97/%E6%8A%80%E6%9C%AF%E5%BA%93%E8%B4%A1%E7%8C%AE%E6%8C%87%E5%8D%97/" class="md-tabs__link">
+        <a href="../../../../%E8%B4%A1%E7%8C%AE%E6%8C%87%E5%8D%97/%E6%8A%80%E6%9C%AF%E5%BA%93%E8%B4%A1%E7%8C%AE%E6%8C%87%E5%8D%97/" class="md-tabs__link">
           
   
     
@@ -365,9 +369,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="YueLu 电控技术指南" class="md-nav__button md-logo" aria-label="YueLu 电控技术指南" data-md-component="logo">
+    <a href="../../../.." title="YueLu 电控技术指南" class="md-nav__button md-logo" aria-label="YueLu 电控技术指南" data-md-component="logo">
       
-  <img src="../../../assets/yuelu_badge.png" alt="logo">
+  <img src="../../../../assets/yuelu_badge.png" alt="logo">
 
     </a>
     YueLu 电控技术指南
@@ -417,7 +421,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../.." class="md-nav__link ">
+            <a href="../../../.." class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -450,11 +454,150 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E5%85%B3%E6%B3%A8%E6%88%91%E4%BB%AC/" class="md-nav__link">
+      <a href="../../../../%E5%85%B3%E6%B3%A8%E6%88%91%E4%BB%AC/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     关注我们
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    入门
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            入门
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../%E5%85%A5%E9%97%A8/%E4%BA%86%E8%A7%A3%E8%B7%83%E9%B9%BF%E6%88%98%E9%98%9F%E7%94%B5%E6%8E%A7%E7%BB%84/introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    了解跃鹿战队电控组
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../%E5%85%A5%E9%97%A8/%E5%90%84%E5%85%B5%E7%A7%8D%E5%8F%8A%E9%81%93%E5%85%B7/robot/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    各兵种及道具
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../%E5%85%A5%E9%97%A8/%E7%94%B5%E6%8E%A7%E7%BB%84%E5%BF%85%E5%A4%87%E8%BD%AF%E4%BB%B6/software/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    电控组必备软件
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../%E5%85%A5%E9%97%A8/%E7%90%86%E8%AE%BA%E5%9F%BA%E7%A1%80/theory/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    理论基础
   </span>
   
 
@@ -486,10 +629,6 @@
       
         
       
-        
-      
-        
-      
     
     
       
@@ -503,24 +642,122 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
             
   
   <span class="md-ellipsis">
-    入门
+    相关教程
   </span>
   
 
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_2">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
-            入门
+            相关教程
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    嵌入式开发
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            嵌入式开发
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_1_1" id="__nav_3_1_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    通信方式
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_1_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_1_1">
+            <span class="md-nav__icon md-icon"></span>
+            通信方式
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -531,11 +768,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%E4%BA%86%E8%A7%A3%E8%B7%83%E9%B9%BF%E6%88%98%E9%98%9F%E7%94%B5%E6%8E%A7%E7%BB%84/introduction/" class="md-nav__link">
+      <a href="../USART/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    了解跃鹿战队电控组
+    USART
   </span>
   
 
@@ -565,7 +802,7 @@
           
   
   <span class="md-ellipsis">
-    各兵种及道具
+    DMA
   </span>
   
 
@@ -576,7 +813,7 @@
         
   
   <span class="md-ellipsis">
-    各兵种及道具
+    DMA
   </span>
   
 
@@ -598,129 +835,45 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#dma_1" class="md-nav__link">
     <span class="md-ellipsis">
-      兵种
+      DMA简介
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="兵种">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      英雄
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      工程
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    <span class="md-ellipsis">
-      步兵
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    <span class="md-ellipsis">
-      哨兵
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
-    <span class="md-ellipsis">
-      无人机
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
-    <span class="md-ellipsis">
-      飞镖
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
-    <span class="md-ellipsis">
-      雷达
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_10" class="md-nav__link">
+  <a href="#dma_2" class="md-nav__link">
     <span class="md-ellipsis">
-      道具
+      DMA工作原理
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="道具">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_11" class="md-nav__link">
-    <span class="md-ellipsis">
-      能量机关
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_12" class="md-nav__link">
-    <span class="md-ellipsis">
-      前哨站和基地
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_13" class="md-nav__link">
-    <span class="md-ellipsis">
-      兑换站
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_14" class="md-nav__link">
+  <a href="#dma_3" class="md-nav__link">
     <span class="md-ellipsis">
-      最后
+      DMA结构
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dma-cubemx" class="md-nav__link">
+    <span class="md-ellipsis">
+      DMA CubeMX配置
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dma-hal" class="md-nav__link">
+    <span class="md-ellipsis">
+      DMA HAL库函数
     </span>
   </a>
   
@@ -742,236 +895,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%E7%94%B5%E6%8E%A7%E7%BB%84%E5%BF%85%E5%A4%87%E8%BD%AF%E4%BB%B6/software/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    电控组必备软件
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../%E7%90%86%E8%AE%BA%E5%9F%BA%E7%A1%80/theory/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    理论基础
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-    
-    
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
-        
-          
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    相关教程
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3">
-            <span class="md-nav__icon md-icon"></span>
-            相关教程
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-    
-    
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
-        
-          
-          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    嵌入式开发
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_1">
-            <span class="md-nav__icon md-icon"></span>
-            嵌入式开发
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_1" >
-        
-          
-          <label class="md-nav__link" for="__nav_3_1_1" id="__nav_3_1_1_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    通信方式
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_1_1_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_1_1">
-            <span class="md-nav__icon md-icon"></span>
-            通信方式
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../%E7%9B%B8%E5%85%B3%E6%95%99%E7%A8%8B/%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%BC%80%E5%8F%91/%E9%80%9A%E4%BF%A1%E6%96%B9%E5%BC%8F/USART/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    USART
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../%E7%9B%B8%E5%85%B3%E6%95%99%E7%A8%8B/%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%BC%80%E5%8F%91/%E9%80%9A%E4%BF%A1%E6%96%B9%E5%BC%8F/DMA/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    DMA
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../%E7%9B%B8%E5%85%B3%E6%95%99%E7%A8%8B/%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%BC%80%E5%8F%91/%E9%80%9A%E4%BF%A1%E6%96%B9%E5%BC%8F/SPI/" class="md-nav__link">
+      <a href="../SPI/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -992,7 +916,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E7%9B%B8%E5%85%B3%E6%95%99%E7%A8%8B/%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%BC%80%E5%8F%91/%E9%80%9A%E4%BF%A1%E6%96%B9%E5%BC%8F/I2C/" class="md-nav__link">
+      <a href="../I2C/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1013,7 +937,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E7%9B%B8%E5%85%B3%E6%95%99%E7%A8%8B/%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%BC%80%E5%8F%91/%E9%80%9A%E4%BF%A1%E6%96%B9%E5%BC%8F/CAN/" class="md-nav__link">
+      <a href="../CAN/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1034,7 +958,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E7%9B%B8%E5%85%B3%E6%95%99%E7%A8%8B/%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%BC%80%E5%8F%91/%E9%80%9A%E4%BF%A1%E6%96%B9%E5%BC%8F/USB/" class="md-nav__link">
+      <a href="../USB/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1155,7 +1079,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E7%9B%B8%E5%85%B3%E6%95%99%E7%A8%8B/%E7%9B%B8%E5%85%B3%E7%BB%84%E4%BB%B6/IMU/%E4%B8%89%E7%BB%B4%E6%97%8B%E8%BD%AC%E8%A1%A8%E7%A4%BA/" class="md-nav__link">
+      <a href="../../../%E7%9B%B8%E5%85%B3%E7%BB%84%E4%BB%B6/IMU/%E4%B8%89%E7%BB%B4%E6%97%8B%E8%BD%AC%E8%A1%A8%E7%A4%BA/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1241,7 +1165,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E7%89%A9%E8%B5%84%E7%AE%A1%E7%90%86/%E7%94%B5%E6%8E%A7%E7%89%A9%E8%B5%84/material/" class="md-nav__link">
+      <a href="../../../../%E7%89%A9%E8%B5%84%E7%AE%A1%E7%90%86/%E7%94%B5%E6%8E%A7%E7%89%A9%E8%B5%84/material/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1311,7 +1235,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E8%B4%A1%E7%8C%AE%E6%8C%87%E5%8D%97/%E6%8A%80%E6%9C%AF%E5%BA%93%E8%B4%A1%E7%8C%AE%E6%8C%87%E5%8D%97/" class="md-nav__link">
+      <a href="../../../../%E8%B4%A1%E7%8C%AE%E6%8C%87%E5%8D%97/%E6%8A%80%E6%9C%AF%E5%BA%93%E8%B4%A1%E7%8C%AE%E6%8C%87%E5%8D%97/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1359,129 +1283,45 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#dma_1" class="md-nav__link">
     <span class="md-ellipsis">
-      兵种
+      DMA简介
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="兵种">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      英雄
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      工程
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    <span class="md-ellipsis">
-      步兵
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    <span class="md-ellipsis">
-      哨兵
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
-    <span class="md-ellipsis">
-      无人机
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
-    <span class="md-ellipsis">
-      飞镖
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
-    <span class="md-ellipsis">
-      雷达
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_10" class="md-nav__link">
+  <a href="#dma_2" class="md-nav__link">
     <span class="md-ellipsis">
-      道具
+      DMA工作原理
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="道具">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_11" class="md-nav__link">
-    <span class="md-ellipsis">
-      能量机关
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_12" class="md-nav__link">
-    <span class="md-ellipsis">
-      前哨站和基地
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_13" class="md-nav__link">
-    <span class="md-ellipsis">
-      兑换站
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_14" class="md-nav__link">
+  <a href="#dma_3" class="md-nav__link">
     <span class="md-ellipsis">
-      最后
+      DMA结构
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dma-cubemx" class="md-nav__link">
+    <span class="md-ellipsis">
+      DMA CubeMX配置
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dma-hal" class="md-nav__link">
+    <span class="md-ellipsis">
+      DMA HAL库函数
     </span>
   </a>
   
@@ -1502,7 +1342,7 @@
                   
 
   
-    <a href="https://github.com/HNUYueLuRM/YueLu_EC_Guide/edit/master/docs/入门/各兵种及道具/robot.md" title="编辑此页" class="md-content__button md-icon">
+    <a href="https://github.com/HNUYueLuRM/YueLu_EC_Guide/edit/master/docs/相关教程/嵌入式开发/通信方式/DMA.md" title="编辑此页" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
     </a>
@@ -1511,28 +1351,108 @@
     
       
     
-    <a href="https://github.com/HNUYueLuRM/YueLu_EC_Guide/raw/master/docs/入门/各兵种及道具/robot.md" title="查看本页的源代码" class="md-content__button md-icon">
+    <a href="https://github.com/HNUYueLuRM/YueLu_EC_Guide/raw/master/docs/相关教程/嵌入式开发/通信方式/DMA.md" title="查看本页的源代码" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0 8a5 5 0 0 1-5-5 5 5 0 0 1 5-5 5 5 0 0 1 5 5 5 5 0 0 1-5 5m0-12.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5Z"/></svg>
     </a>
   
 
 
-<h1 id="_1">各兵种及道具<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<p>规则大变，详细请看<a href="https://bbs.robomaster.com/wiki/20204847">规则手册</a></p>
-<h2 id="_2">兵种<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<h3 id="_3">英雄<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
-<h3 id="_4">工程<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
-<h3 id="_5">步兵<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
-<h3 id="_6">哨兵<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
-<h3 id="_7">无人机<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
-<h3 id="_8">飞镖<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
-<h3 id="_9">雷达<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
-<h2 id="_10">道具<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h2>
-<h3 id="_11">能量机关<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
-<h3 id="_12">前哨站和基地<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
-<h3 id="_13">兑换站<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h3>
-<h2 id="_14">最后<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h2>
+<h1 id="dma">DMA<a class="headerlink" href="#dma" title="Permanent link">&para;</a></h1>
+<h2 id="dma_1">DMA简介<a class="headerlink" href="#dma_1" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>DMA(Direct Memory Access)：直接内存存取</strong>是一种可以大大减轻CPU工作量的数据转移方式。</li>
+<li>CPU有转移数据、计算、控制程序转移等很多功能，但其实转移数据（尤其是转移大量数据）是可以不需要CPU参与。比如希望外设A的数据拷贝到外设B，<strong>只要给两种外设提供一条数据通路</strong>，再加上一些控制转移的部件就可以完成数据的拷贝。</li>
+<li>DMA就是基于以上设想设计的，它的作用就是<strong>解决大量数据转移过度消耗CPU资源的问题</strong>。有了DMA使CPU更专注于更加实用的操作--计算、控制等。</li>
+</ol>
+<h2 id="dma_2">DMA工作原理<a class="headerlink" href="#dma_2" title="Permanent link">&para;</a></h2>
+<p>DMA的作用就是<strong>实现数据的直接传输，而去掉了传统数据传输需要CPU寄存器参与的环节</strong>，主要涉及四种情况的数据传输，但本质上是一样的，都是从内存的某一区域传输到内存的另一区域（外设的数据寄存器本质上就是内存的一个存储单元）。四种情况的数据传输如下：</p>
+<ul>
+<li>从内存到外设</li>
+<li>从外设到内存</li>
+<li>从内存到内存</li>
+<li>从外设到外设</li>
+</ul>
+<p>当用户将参数设置好，主要涉及<strong>源地址、目标地址、传输数据量</strong>这三个，DMA控制器就会启动数据传输，传输的终点就是剩余传输数据量为0（循环传输不是这样的）。换句话说只要剩余传输数据量不是0，而且DMA是启动状态，那么就会发生数据传输。</p>
+<h2 id="dma_3">DMA结构<a class="headerlink" href="#dma_3" title="Permanent link">&para;</a></h2>
+<ol>
+<li>DMA特性<ul>
+<li>12个 独立的可配置的通道(请求)<strong>DMA1有7个通道，DMA2 有5个通道</strong>。</li>
+<li>每个通道都直接连接专用的硬件DMA请求，每个通道都同样支持软件触发。这些功能通过软件来配置。</li>
+<li>在七个请求间的优先权可以通过软件编程设置(<strong>共有四级：很高、高、中等和低</strong>)，假如在相等优先权时由硬件决定(请求0优先于请求1，依此类推)。</li>
+<li>独立的源和目标数据区的传输宽度(<strong>字节、半字、全字</strong>)，模拟打包和拆包的过程。源和目标地址必须按数据传输宽度对齐。</li>
+<li>每个通道都有3个事件标志(<strong>DMA 半传输，DMA传输完成和DMA传输出错</strong>)，这3个事件标志逻辑或成为一个单独的中断请求。</li>
+<li><strong>四种传输方式</strong>。</li>
+<li><strong>闪存、SRAM 、外设的SRAM 、APB1 APB2和AHB外设</strong>均可作为访问的源和目标。 </li>
+<li>可编程的数据传输数目：最大为<strong>65536</strong>。</li>
+</ul>
+</li>
+<li>DMA框图
+      <a class="glightbox" href="../assets/Snipaste_2023-10-19_20-11-16.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../assets/Snipaste_2023-10-19_20-11-16.png" /></a></li>
+<li>DMA通道<ul>
+<li>DMA1
+   <a class="glightbox" href="../assets/Snipaste_2023-10-19_20-35-32.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../assets/Snipaste_2023-10-19_20-35-32.png" /></a></li>
+<li>DMA2
+   <a class="glightbox" href="../assets/Snipaste_2023-10-19_20-35-41.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../assets/Snipaste_2023-10-19_20-35-41.png" /></a></li>
+</ul>
+</li>
+<li>DMA请求映射
+      <a class="glightbox" href="../assets/Snipaste_2023-10-19_20-19-37.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../assets/Snipaste_2023-10-19_20-19-37.png" /></a>
+      <a class="glightbox" href="../assets/Snipaste_2023-10-19_20-19-47.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../assets/Snipaste_2023-10-19_20-19-47.png" /></a></li>
+</ol>
+<h2 id="dma-cubemx">DMA CubeMX配置<a class="headerlink" href="#dma-cubemx" title="Permanent link">&para;</a></h2>
+<p>以USART串口为例
+<a class="glightbox" href="../assets/Snipaste_2024-08-05_13-36-01.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../assets/Snipaste_2024-08-05_13-36-01.png" /></a></p>
+<h2 id="dma-hal">DMA HAL库函数<a class="headerlink" href="#dma-hal" title="Permanent link">&para;</a></h2>
+<ol>
+<li>初始化函数
+   <div class="language-C highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c1">// DMA初始化</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="n">HAL_StatusTypeDef</span><span class="w"> </span><span class="n">HAL_DMA_Init</span><span class="p">(</span><span class="n">DMA_HandleTypeDef</span><span class="w"> </span><span class="o">*</span><span class="n">hdma</span><span class="p">)</span>
+</span></code></pre></div></td></tr></table></div></li>
+<li>操作函数
+   <div class="language-C highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span>
+<span class="normal"><a href="#__codelineno-1-3">3</a></span>
+<span class="normal"><a href="#__codelineno-1-4">4</a></span>
+<span class="normal"><a href="#__codelineno-1-5">5</a></span>
+<span class="normal"><a href="#__codelineno-1-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="c1">// DMA接收</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="n">HAL_StatusTypeDef</span><span class="w"> </span><span class="n">HAL_UART_Receive_DMA</span><span class="p">(</span><span class="n">UART_HandleTypeDef</span><span class="w"> </span><span class="o">*</span><span class="n">huart</span><span class="p">,</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="o">*</span><span class="n">pData</span><span class="p">,</span><span class="w"> </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">Size</span><span class="p">)</span><span class="w">   </span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="c1">// DMA发送</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="n">HAL_StatusTypeDef</span><span class="w"> </span><span class="n">HAL_UART_Transmit_DMA</span><span class="p">(</span><span class="n">UART_HandleTypeDef</span><span class="w"> </span><span class="o">*</span><span class="n">huart</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="o">*</span><span class="n">pData</span><span class="p">,</span><span class="w"> </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">Size</span><span class="p">)</span><span class="w">  </span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="c1">// 空闲中断 + DMA</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="n">HAL_StatusTypeDef</span><span class="w"> </span><span class="n">HAL_UARTEx_ReceiveToIdle_DMA</span><span class="p">(</span><span class="n">UART_HandleTypeDef</span><span class="w"> </span><span class="o">*</span><span class="n">huart</span><span class="p">,</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="o">*</span><span class="n">pData</span><span class="p">,</span><span class="w"> </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">Size</span><span class="p">)</span><span class="w">   </span>
+</span></code></pre></div></td></tr></table></div></li>
+<li>中断回调函数
+   <div class="language-C highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-2-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-2-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-2-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-2-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-2-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-2-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-2-10">10</a></span>
+<span class="normal"><a href="#__codelineno-2-11">11</a></span>
+<span class="normal"><a href="#__codelineno-2-12">12</a></span>
+<span class="normal"><a href="#__codelineno-2-13">13</a></span>
+<span class="normal"><a href="#__codelineno-2-14">14</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="c1">//函数处理DMA中断请求。</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="kt">void</span><span class="w"> </span><span class="nf">HAL_DMA_IRQHandler</span><span class="p">(</span><span class="n">DMA_HandleTypeDef</span><span class="w"> </span><span class="o">*</span><span class="n">hdma</span><span class="p">)</span><span class="w">      </span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="c1">//Tx传输完成回调函数。             </span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="kt">void</span><span class="w"> </span><span class="n">HAL_UART_TxCpltCallback</span><span class="p">(</span><span class="n">UART_HandleTypeDef</span><span class="w"> </span><span class="o">*</span><span class="n">huart</span><span class="p">);</span><span class="w">        </span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="c1">//Tx半传输完成回调函数。        </span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="kt">void</span><span class="w"> </span><span class="nf">HAL_UART_TxHalfCpltCallback</span><span class="p">(</span><span class="n">UART_HandleTypeDef</span><span class="w"> </span><span class="o">*</span><span class="n">huart</span><span class="p">);</span><span class="w">      </span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="c1">//Rx传输完成回调函数。      </span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="kt">void</span><span class="w"> </span><span class="nf">HAL_UART_RxCpltCallback</span><span class="p">(</span><span class="n">UART_HandleTypeDef</span><span class="w"> </span><span class="o">*</span><span class="n">huart</span><span class="p">);</span><span class="w">                </span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="c1">//Rx完成一半传输回调函数。</span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="kt">void</span><span class="w"> </span><span class="nf">HAL_UART_RxHalfCpltCallback</span><span class="p">(</span><span class="n">UART_HandleTypeDef</span><span class="w"> </span><span class="o">*</span><span class="n">huart</span><span class="p">);</span><span class="w">      </span>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="c1">//UART错误回调函数。      </span>
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12"></a><span class="kt">void</span><span class="w"> </span><span class="nf">HAL_UART_ErrorCallback</span><span class="p">(</span><span class="n">UART_HandleTypeDef</span><span class="w"> </span><span class="o">*</span><span class="n">huart</span><span class="p">);</span><span class="w">           </span>
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13"></a><span class="c1">//若使能了空闲中断则进入这个函数     </span>
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14"></a><span class="kt">void</span><span class="w"> </span><span class="n">HAL_UARTEx_RxEventCallback</span><span class="p">(</span><span class="n">UART_HandleTypeDef</span><span class="w"> </span><span class="o">*</span><span class="n">huart</span><span class="p">,</span><span class="w"> </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">Size</span><span class="p">)</span><span class="w">  </span>
+</span></code></pre></div></td></tr></table></div></li>
+</ol>
 
 
 
@@ -1555,7 +1475,7 @@
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2025-10-26</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2024-09-06</span>
   </span>
 
     
@@ -1659,12 +1579,12 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.path", "navigation.top", "navigation.indexes", "navigation.tracking", "search.suggest", "search.highlight", "search.share", "content.code.annotate", "content.code.copy", "content.code.select", "content.action.edit", "content.action.view"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "navigation.path", "navigation.top", "navigation.indexes", "navigation.tracking", "search.suggest", "search.highlight", "search.share", "content.code.annotate", "content.code.copy", "content.code.select", "content.action.edit", "content.action.view"], "search": "../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
       
-        <script src="../../../javascripts/mathjax.js"></script>
+        <script src="../../../../javascripts/mathjax.js"></script>
       
         <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       
