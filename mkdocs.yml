@@ -58,6 +58,7 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.superfences
+  - attr_list
 
 extra_javascript:
   - javascripts/mathjax.js
@@ -99,6 +100,8 @@ nav:
     - 相关组件:
       - IMU:
         - 三维旋转表示: 相关教程/相关组件/IMU/三维旋转表示.md
+  - 兵种:
+    - 平衡步兵: 兵种/平衡步兵/平衡步兵技术路线.md
   - 物资管理:
     - 电控物资: 物资管理/电控物资/material.md
   - 贡献指南:
