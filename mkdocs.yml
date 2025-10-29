@@ -78,6 +78,7 @@ plugins:
   - git-committers:
       repository: HNUYueLuRM/YueLu_EC_Guide
       branch: master
+      token: ""
 
 nav:
   - 首页: 
